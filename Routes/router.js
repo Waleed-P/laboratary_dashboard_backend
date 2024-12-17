@@ -36,4 +36,5 @@ router.get('/get_tests',jwtMiddleware,testController.getAllTests)
 router.put('/update_test/:test_id',jwtMiddleware,testController.updateTest)
 router.delete('/remove_test/:test_id',jwtMiddleware,testController.removeTest)
 //=============Prediction=============//
+router.post('/generate_future_prediction/:result_id', jwtMiddleware, resultController.generatePrediction);
 module.exports = router
